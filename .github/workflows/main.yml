@@ -17,6 +17,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, World!!
 
+      # ライブラリをインストール
+      - name: Run pip install
+        run: pip install colorlog
+
       # pythonを実行
       - name: Run a python file
         run: python main.py
