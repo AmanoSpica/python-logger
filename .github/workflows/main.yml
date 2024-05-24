@@ -1,0 +1,22 @@
+name: Tutorial
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 自分自身のリポジトリのデータを読み込む
+      - uses: actions/checkout@v3
+
+      # Hello World
+      - name: Run a one-line script
+        run: echo Hello, World!!
+
+      # pythonを実行
+      - name: Run a python file
+        run: python main.py
